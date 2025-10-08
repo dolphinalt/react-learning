@@ -1,13 +1,13 @@
-interface CardProps {
+interface RewardCardProps {
   title: string;
   description: string;
   points: number;
 }
 
-const Card = ({ title, description, points }: CardProps) => {
+const RewardCard = ({ title, description, points }: RewardCardProps) => {
   return (
     <>
-      <div className="flex flex-col gap-2 p-7 rounded-4xl bg-light-gray h-48">
+      <div className="flex flex-col gap-2 p-7 rounded-4xl bg-gradient-to-r from-mango-orange to-strawberry-red h-48">
         <div>
           <div className="flex text-2xl font-bold text-left text-superdark-gray">
             {title}
@@ -16,11 +16,10 @@ const Card = ({ title, description, points }: CardProps) => {
             {points}
           </div>
         </div>
-        <hr className="w-full h-1 bg-gradient-to-r from-mango-orange to-strawberry-red border-0"></hr>
-        <div className="text-dark-gray">{description}</div>
+        <div className="">{description}</div>
       </div>
     </>
   );
 };
 
-export default Card;
+export default RewardCard;
